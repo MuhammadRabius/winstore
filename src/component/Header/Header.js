@@ -46,11 +46,7 @@ const Header = () => {
           {/* logo  */}
           <div>
             <Link to="/">
-              <img
-                className="logo"
-                src="/images/logo/logo.png"
-                alt="hello_car_logo"
-              />
+              <h1>Mediusware</h1>
             </Link>
           </div>
 
