@@ -1,66 +1,71 @@
-import { Button, message } from "antd";
+import { Button, Input, Select } from "antd";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {
+  HiOutlineUser,
+  HiOutlineHeart,
+  HiOutlineShoppingCart,
+  HiOutlinePhoneIncoming,
+} from "react-icons/hi";
 import "./Header.scss";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [check, setCheck] = useState(false);
-  const [amount, setAmount] = useState("");
-
-  // const isSignIn = () => {
-  //   return IsToken() ? (
-  //     <>
-  //       <div className="amount" onClick={checkBalance}>
-  //         <span className={`dot ${check ? "animation" : ""}`}>৳</span>
-  //         <div className="tap">{check ? amount : "Check balance"}</div>
-  //       </div>
-
-  //       <li className="dropdown__menu">
-  //         <span className="user">
-  //           <FaUser />
-  //         </span>
-
-  //         <div className="dropdown">
-  //           <Link to="/dashboard">Dashboard</Link>
-  //           <Link to="/dashboard/user-booking">My Booking</Link>
-  //           <Link to="/dashboard/change-password">Change Password</Link>
-
-  //           <Link to="#" onClick={Logout}>
-  //             Logout
-  //           </Link>
-  //         </div>
-  //       </li>
-  //     </>
-  //   ) : (
-  //     <li>
-  //       {" "}
-  //       <Link to="/login">Sign In</Link>
-  //     </li>
-  //   );
-  // };
-
+  const { Search } = Input;
   return (
     <div className="header">
       <div className="container">
         <div className="wrapper">
-          {/* logo  */}
-          <div>
-            <Link to="/">
-              <h1>Mediusware</h1>
-            </Link>
+          <div className="header_log_search">
+            <div className="logo">
+              <span>WinStore</span>
+            </div>
+            <div className="search_bar">
+              <div className="drop-down">
+                <Select
+                  name="all_cat"
+                  id="all_cat"
+                  style={{
+                    width: 200,
+                    color: "#ABA3A3",
+                  }}
+                  defaultValue="All Catagories"
+                >
+                  <option value="All Category">Z Category</option>
+                  <option value="Category">X Category</option>
+                </Select>
+              </div>
+              <div className="search_product">
+                <Search
+                  placeholder="Search Your Products"
+                  allowClear
+                  enterButton
+
+                  // onSearch={onSearch}
+                />
+              </div>
+            </div>
           </div>
 
           {/* menu  */}
-          <div className="nav__menu">
-            <ul>
-              {/* <li>
-                <Link to="/login">Sign In</Link>
-              </li> */}
-              {/* {isSignIn()} */}
-              <Link to="/user-login">
-                <Button type="primary">Login</Button>
-              </Link>
-            </ul>
+          <div className="navigation_items">
+            <div className="contact_iter">
+              <span>Call now</span>
+              <span>
+                <HiOutlinePhoneIncoming /> 0177XXXXXXX
+              </span>
+              <NavLink>Sing in</NavLink>
+            </div>
+
+            <div className="quick_res_avatar">
+              <HiOutlineUser />
+            </div>
+            <div className="quick_res_avatar">
+              <HiOutlineHeart />
+            </div>
+            <div className="quick_res_avatar">
+              <HiOutlineShoppingCart />
+              <span>Cart</span>
+            </div>
           </div>
         </div>
       </div>
