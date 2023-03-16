@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <span className="footer_text">StayIn</span> <br />
             <span className="footer_text">touch with</span> <br />
-            <span className="footer_text">HelloCar</span>
+            <span className="footer_text">Mediusware</span>
           </div>
           <hr className="mt-2" />
         </div>
