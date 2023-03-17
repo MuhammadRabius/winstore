@@ -1,0 +1,41 @@
+.best_deals_page{
+      padding: 2rem 0;
+      .innerContent{
+            .comp__title{
+              margin-left: 40px;
+              font-size: 20px;
+              font-family: Roboto;
+
+              .s_t{
+                  color: rgba(0, 202, 215, 1);
+              }
+            }
+            .navigate_items{
+
+                  .ant-menu{
+                        font-family: Roboto !important;
+                  }
+                  .ant-menu-item-selected{
+                       color: rgba(0, 202, 215, 1);
+                  }
+                  
+                  .ant-menu-item-selected::after{
+                       border-bottom-color: rgba(0, 202, 215, 1) !important;
+                  }
+                  .ant-menu-overflow{
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                  }
+            }
+
+            .nav_display{
+                  margin-top: 20px;
+                  display: grid;
+                  grid-template-columns: repeat(4,1fr);
+                  align-items: center;
+                  gap: 20px;
+            }
+}
+
+}

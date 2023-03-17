@@ -5,8 +5,6 @@ import "./NewArrivel.scss";
 const NewArrivel = () => {
   const [product, setProducts] = useState([]);
 
-  console.log("data", product);
-
   //   get Products
   useEffect(() => {
     const ac = new AbortController();
@@ -37,8 +35,10 @@ const NewArrivel = () => {
               {product.slice(0, 6).map((item, i) => {
                 return (
                   <>
-                    <Card size="small" hoverable>
-                      <p>{item.category.toUpperCase()}</p>
+                    <Card size="small" hoverable key={i}>
+                      <p style={{ textTransform: "capitalize" }}>
+                        {item.category}
+                      </p>
                       <p className="p_title">{`${item.title.slice(
                         0,
                         15

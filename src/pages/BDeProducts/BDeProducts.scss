@@ -1,21 +1,4 @@
-.new_arr_page{
-      padding: 2rem 0;
-      .innerContent{
-            .comp__title{
-              margin-left: 40px;
-              font-size: 20px;
-              font-family: Roboto;
 
-              .s_t{
-                  color: rgba(0, 202, 215, 1);
-              }
-            }
-          
-            .product_display{
-                  display: grid;
-                  grid-template-columns: repeat(6,1fr);
-                  align-items: center;
-                  gap: 20px;
 
                   .ant-card{
                         .p_title{
@@ -44,7 +27,4 @@
                               border-radius: 0 !important;
                         }
                   }
-            }
-                
-      }
-}
+            

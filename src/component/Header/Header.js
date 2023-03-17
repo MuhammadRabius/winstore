@@ -1,5 +1,5 @@
 import { Button, Input, Select } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HiOutlineUser,
   HiOutlineHeart,
@@ -8,9 +8,28 @@ import {
 } from "react-icons/hi";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
+import { Categories } from "../../API/api";
 
 const Header = () => {
   const { Search } = Input;
+  const [cat, setCats] = useState([]);
+
+  //   get Categories
+  useEffect(() => {
+    const ac = new AbortController();
+
+    (async () => {
+      try {
+        const display = await Categories({ signal: ac.signal });
+        setCats(display.data);
+      } catch (err) {
+        console.warn(err.message);
+      }
+    })();
+
+    return () => ac.abort();
+  }, []);
+
   return (
     <div className="header">
       <div className="container">
@@ -30,8 +49,16 @@ const Header = () => {
                   }}
                   defaultValue="All Catagories"
                 >
-                  <option value="All Category">Z Category</option>
-                  <option value="Category">X Category</option>
+                  {cat.map((item, i) => {
+                    return (
+                      <Select.Option
+                        style={{ textTransform: "capitalize" }}
+                        value={item}
+                      >
+                        {item}
+                      </Select.Option>
+                    );
+                  })}
                 </Select>
               </div>
               <div className="search_product">

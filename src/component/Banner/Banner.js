@@ -4,7 +4,9 @@ import "./Banner.scss";
 import BannerNav from "../../archive_data/BannerNav";
 import { NavLink } from "react-router-dom";
 import { SocialMediaList } from "../../archive_data/SocialMedia";
+
 const Banner = () => {
+  
   return (
     <>
       <div className="banner_page">
