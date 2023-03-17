@@ -1,30 +1,56 @@
 
-
                   .ant-card{
+
+                        .p_info{
+                         display: flex;
+                         justify-content: space-between;
+                         gap: 10px;
+
+                        .p_content{
+                              line-height: 14px;
+                         }
                         .p_title{
                               color: rgba(3, 78, 83, 1);
                         }
+                        .new_p{
+                                    color: rgba(20, 177, 240, 1);
+                              }
+                        .s__offer{
+                                    color: rgba(10, 174, 185, 1);
+                              }
+                        p{
+                              margin-bottom: 0.8rem !important;
+                              
+                        }
+                  }
 
+// Second Part-------------
+                  .offer_img{
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     gap: 10px;
+
+                     .offer_text{
+                        width: 101px;
+                        height: 67px;
+                        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+                        text-align: center;
+                        font-family: 'Century Gothic';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 29px;
+                     }
+                  }
+                        
                         img{
                               width: 158px;
                               height: 128px;
                               padding: 1rem;
                         }
-                        .price{
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
+                        
 
-                              .new_p{
-                                    color: rgba(10, 174, 185, 1);
-                              }
-                        }
-
-                        .ant-btn{
-                              width: 100%;
-                              background: rgba(10, 174, 185, 1);
-                              color: #fff;
-                              border-radius: 0 !important;
-                        }
+                        
                   }
             
