@@ -1,18 +1,115 @@
-.footer_page{
-      background-color: rgba(27,24,71,255);
-      padding: 90px 0;
+@import '../../../variable.scss';
+
+    .footer {
+
+        background: $color ;
+        padding: 2rem 0; 
+        font-family: Century Gothic;
 
 
-      .footer_text{
-      color: #88bf3f;
-      font-size: 35px;
-      font-weight: 500;
-}
-      .important_link{
-              color: white; 
-              margin-top: 10px;
+        
+        .footer__row {
+            @include flexo(flex, flex-start, space-between);
+            flex-wrap: wrap;
 
-       }
-}
+            .row {
+
+            //     width: 20%;
+                margin-bottom: 1rem;
+
+                // footer logos
+                .footer__logo {
+                  .c_title{
+                        color: #fff;
+                  }
+                    .title{ 
+                        font-size: 1.1rem;
+                        color: rgba(0, 202, 215, 1); 
+                    }
+            
+                }
+                
+                .title {
+                    font-size: 1rem;
+                    color: rgba(0, 202, 215, 1);
+                    
+                }
+                
+                .row__logos {
+                    margin-bottom: 2rem;
 
 
+                    .title {}
+
+                    .s__logos {
+                        color: #fff;
+
+                        svg{
+                            padding: 5px;
+                             width: 31px;
+                            height: 30px;
+                        
+                        }
+                    }
+
+                
+                }
+
+                
+
+
+                @media screen and ( max-width: 750px ) {
+                    width: 50%;
+                    justify-content: center;
+                }
+
+                @media screen and ( max-width: 400px ) {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+
+            }
+
+                        // footer menus
+                        .footer__navs {
+                            .list {
+                                ul {
+                                    list-style: none;
+                                    padding: 0px;
+                                    li {
+                                        a {
+                                            font-size: 0.875rem;
+                                            color: #ababab;
+                                            font-weight: 500;
+                                            transition: all 0.3s ease-out;
+                                            @include flex(flex, center);
+                                            text-decoration: none;
+                                            svg {
+                                                margin-right: 8px;
+                                            }
+
+                                            &:hover {
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+        }
+
+        .payments__logos{
+                text-align: end;
+                .t__logos{
+
+                        img{ 
+                            height: 50px;
+                            margin-left: 10px;
+                        }
+
+                    }
+        }
+    }
